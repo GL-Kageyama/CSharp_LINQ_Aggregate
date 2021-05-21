@@ -4,74 +4,73 @@ using System.Collections.Generic;
 
 namespace Aggregate
 {
-	class MainClass 
-	{
-		public static void Main(string[] args)
-		{
-			var aggr = new aggregateClass();
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            var aggregateClass = new AggregateClass();
 
-			aggr.GetMax();
+            aggregateClass.GetMax();
 
-			aggr.GetMin();
+            aggregateClass.GetMin();
 
-			aggr.GetAve();
+            aggregateClass.GetAve();
 
-			aggr.GetSum();
+            aggregateClass.GetSum();
 
-			aggr.GetCount();
+            aggregateClass.GetCount();
 
-			aggr.GetAgg();
-		}
-	}
+            aggregateClass.GetAgg();
+        }
+    }
 
-	class aggregateClass
-	{
-		List<int> source = new List<int>
-		{
-			2, 7, 8, 4, 9, 49, 36, 3, 8, 8, 26, 78, 65
-		};
+    class AggregateClass
+    {
+        List<int> source = new List<int>
+        {
+            2, 7, 8, 4, 9, 49, 36, 3, 8, 8, 26, 78, 65
+        };
 
-		// Max()
-		// 最大値を取得
-		public void GetMax()
-		{
-			Console.WriteLine(source.Max());
-		}
+        // Max()
+        // Get the maximum value
+        public void GetMax()
+        {
+            Console.WriteLine(source.Max());
+        }
 
-		// Min()
-		// 最小値を取得
-		public void GetMin()
-		{
-			Console.WriteLine(source.Min());
-		}
+        // Min()
+        // Get the minimum value
+        public void GetMin()
+        {
+            Console.WriteLine(source.Min());
+        }
 
-		// Average()
-		// 平均値を取得
-		public void GetAve()
-		{
-			Console.WriteLine(source.Average());
-		}
+        // Average()
+        // Get the average value
+        public void GetAve()
+        {
+            Console.WriteLine(source.Average());
+        }
 
-		// Sum()
-		// 合計を取得
-		public void GetSum()
-		{
-			Console.WriteLine(source.Sum());
-		}
+        // Sum()
+        // Get the total
+        public void GetSum()
+        {
+            Console.WriteLine(source.Sum());
+        }
 
-		// Count()
-		// 要素数を取得
-		public void GetCount()
-		{
-			Console.WriteLine(source.Count());
-		}
+        // Count()
+        // Get the number of elements
+        public void GetCount()
+        {
+            Console.WriteLine(source.Count());
+        }
 
-		// Aggregate()
-		// 集計を取得
-		public void GetAgg()
-		{
-			Console.WriteLine(source.Aggregate((now, next) => now + next));
-		}
-	}
+        // Aggregate()
+        // Get the aggregate
+        public void GetAgg()
+        {
+            Console.WriteLine(source.Aggregate((now, next) => now + next));
+        }
+    }
 }
-
